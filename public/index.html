@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieBox Mobile Stream Portal</title>
+    <style>
+        body {
+            background: #0f1016;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 26px; color: #f97316; }
+        p.subtitle { color: #94a3b8; font-size: 14px; margin-top: 5px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .movie-card {
+            background: #181922;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #232533;
+            transition: transform 0.2s;
+        }
+        .movie-card:hover { transform: translateY(-4px); }
+        .movie-card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+        }
+        .card-info { padding: 12px; }
+        .card-info h3 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .actions {
+            display: flex;
+            gap: 6px;
+        }
+        .btn {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            padding: 8px 4px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 6px;
+            color: #fff;
+        }
+        .btn-vlc { background: #ea580c; }
+        .btn-mx { background: #0284c7; }
+        .btn-web { background: #374151; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MovieBox Stream Portal</h1>
+        <p class="subtitle">Tap "VLC" or "MX" on mobile to stream instantly</p>
+    </header>
+    <div class="grid">
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt14173636/img" alt="The Invite" loading="lazy" />
+            <div class="card-info">
+                <h3>The Invite (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt14173636#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt14173636#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt14173636" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt6262770/img" alt="Tenzing" loading="lazy" />
+            <div class="card-info">
+                <h3>Tenzing (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt6262770#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt6262770#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt6262770" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt37287335/img" alt="Obsession" loading="lazy" />
+            <div class="card-info">
+                <h3>Obsession (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt37287335#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt37287335#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt37287335" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt34384900/img" alt="Love of Your Life" loading="lazy" />
+            <div class="card-info">
+                <h3>Love of Your Life (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt34384900#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt34384900#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt34384900" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt32358390/img" alt="The Cycle" loading="lazy" />
+            <div class="card-info">
+                <h3>The Cycle (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt32358390#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt32358390#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt32358390" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt37281055/img" alt="Buddy" loading="lazy" />
+            <div class="card-info">
+                <h3>Buddy (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt37281055#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt37281055#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt37281055" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt22084616/img" alt="Spider-Man: Brand New Day" loading="lazy" />
+            <div class="card-info">
+                <h3>Spider-Man: Brand New Day (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt22084616#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt22084616#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt22084616" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt13609648/img" alt="Sense and Sensibility" loading="lazy" />
+            <div class="card-info">
+                <h3>Sense and Sensibility (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt13609648#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt13609648#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt13609648" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt27369017/img" alt="Hope" loading="lazy" />
+            <div class="card-info">
+                <h3>Hope (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt27369017#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt27369017#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt27369017" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt32261958/img" alt="Verity" loading="lazy" />
+            <div class="card-info">
+                <h3>Verity (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt32261958#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt32261958#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt32261958" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt26657236/img" alt="Backrooms" loading="lazy" />
+            <div class="card-info">
+                <h3>Backrooms (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt26657236#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt26657236#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt26657236" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt34379051/img" alt="By Any Means" loading="lazy" />
+            <div class="card-info">
+                <h3>By Any Means (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt34379051#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt34379051#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt34379051" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt15047880/img" alt="Disclosure Day" loading="lazy" />
+            <div class="card-info">
+                <h3>Disclosure Day (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt15047880#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt15047880#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt15047880" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt10794054/img" alt="The Weight" loading="lazy" />
+            <div class="card-info">
+                <h3>The Weight (2020)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt10794054#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt10794054#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt10794054" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt26581740/img" alt="Weapons" loading="lazy" />
+            <div class="card-info">
+                <h3>Weapons (2025)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt26581740#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt26581740#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt26581740" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt27165187/img" alt="The End of Oak Street" loading="lazy" />
+            <div class="card-info">
+                <h3>The End of Oak Street (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt27165187#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt27165187#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt27165187" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt37969426/img" alt="The Muppet Show" loading="lazy" />
+            <div class="card-info">
+                <h3>The Muppet Show (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt37969426#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt37969426#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt37969426" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt0080761/img" alt="Friday the 13th" loading="lazy" />
+            <div class="card-info">
+                <h3>Friday the 13th (1980)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt0080761#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt0080761#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt0080761" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt6933238/img" alt="Unabomber" loading="lazy" />
+            <div class="card-info">
+                <h3>Unabomber (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt6933238#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt6933238#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt6933238" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="movie-card">
+            <img src="https://images.metahub.space/poster/small/tt12042730/img" alt="Project Hail Mary" loading="lazy" />
+            <div class="card-info">
+                <h3>Project Hail Mary (2026)</h3>
+                <div class="actions">
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt12042730#Intent;package=org.videolan.vlc;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-vlc">▶ VLC</a>
+                    <a href="intent:https://vidsrc.cc/v2/embed/movie/tt12042730#Intent;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;type=video/*;end" class="btn btn-mx">▶ MX</a>
+                    <a href="https://vidsrc.cc/v2/embed/movie/tt12042730" target="_blank" class="btn btn-web">🌐 Watch</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

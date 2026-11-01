@@ -1,0 +1,52 @@
+name: Auto Sync Movies to Blogger
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Runs automatically every 6 hours
+  workflow_dispatch:        # Allows manual 1-click execution anytime
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run MovieBox Blogger Sync
+        env:
+          BLOGGER_SECRET_EMAIL: ${{ secrets.BLOGGER_SECRET_EMAIL }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          BLOGGER_ACCESS_TOKEN: ${{ secrets.BLOGGER_ACCESS_TOKEN }}
+        run: |
+          python sync_movies.py --max-posts 3
+
+      - name: Commit Updated History
+        run: |
+          git config --global user.name "MovieBox-Sync-Bot"
+          git config --global user.email "bot@moviebox.local"
+          git add published_history.json public/
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update published movie history [skip ci]"
+            git push
+          fi
+
